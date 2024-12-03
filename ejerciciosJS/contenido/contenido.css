@@ -4,10 +4,9 @@
 }
 
 
-
 body {
     margin: 0px;
-    height: 100vh;
+    height: 100vh ;
     width: 100%;
     display: flex;
     align-items: center;
@@ -52,22 +51,25 @@ transition: background .2s ease-in
     margin: auto;
 }
 
-.now{
-text-align: center;
-color: black;
-background-color: rgb(255, 255, 255);
-padding: auto;
-min-width: 12rem;
-max-width: 12rem;
-height: inherit;
-border-radius: 1rem;
-font-weight: bold;
-font-size: x-large;
-box-shadow: 6px 8px black;
-border-color: black;
-border-style: solid;
-visibility: inherit;
-transition: all .2s ease-in
+.boxes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    padding: auto;
+    min-width: 12rem;
+    max-width: 12rem;
+    height: inherit;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: x-large;
+    box-shadow: 6px 8px black;
+    border-color: black;
+    border-style: solid;
+    visibility: inherit;
+    transition: all .2s ease-in
 }
 
 .menu{

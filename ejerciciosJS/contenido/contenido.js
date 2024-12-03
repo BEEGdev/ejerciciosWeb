@@ -6,7 +6,8 @@ const time = document.querySelector("#time") //botón para la hora
 const noTime = document.querySelector("#noTime") //botón parar hora
 const clocks = document.querySelector("#clocks") //botón para los relojes
 const noClocks = document.querySelector("#noClocks") //botón parar relojes
-const boxes = document.getElementsByClassName("now")//div de relojes
+const boxes = document.getElementsByClassName("boxes")//div de relojes
+const nowClass = document.getElementsByClassName("now")//div de relojes
 const content = document.querySelector("#contenido") //div principal
 
 
@@ -97,18 +98,6 @@ function toggleClocks(isToggle = false){
     console.log(isToggle==true);
     if(isToggle!=false) isClocksVisible=!isClocksVisible;
 
-    if(isTimeRunning){
-        for (let i=0; i<4;i++){
-            boxes[i].innerHTML= `${hours} : ${minutes} : ${seconds}`
-        }
-    }
-    else{
-        for (let i=0; i<4;i++){
-            console.log(2)
-            boxes[i].innerHTML= "¿Llego tarde?";
-        }
-    }
-    
     if (isClocksVisible){
         for (let i=0; i<4;i++){
             boxes[i].style.visibility = "visible";
@@ -126,5 +115,17 @@ function toggleClocks(isToggle = false){
         }
         clocks.hidden=false;
         noClocks.hidden=true;
+    }
+
+    if(isTimeRunning){
+        for (let i=0; i<4;i++){
+            nowClass[i].innerHTML= `${hours} : ${minutes} : ${seconds}`
+        }
+    }
+    else{
+        for (let i=0; i<4;i++){
+            console.log(2)
+            nowClass[i].innerHTML= "¿Llego tarde?";
+        }
     }
 }
